@@ -1,6 +1,7 @@
 # dog-pose-estimation
 
 Fun project for markerless pose estimation of dogs using DeepLabCut
+![](coco_pose.gif)
 
 ## Step 1 - Collect Video
 
