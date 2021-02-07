@@ -18,7 +18,7 @@ Since I'm using my MacBook Pro with an Intel Core i5, I used the [conda file for
 ### Create the Project
 
 ```python
-deeplabcut.create_new_project('ProjectName','YourName', ['/usr/FullPath/OfVideo1.mov', '/usr/FullPath/OfVideo2.mov', '/usr/FullPath/OfVideo1.mov'],
+deeplabcut.create_new_project('ProjectName','YourName', ['/Users/FullPath/OfVideo1.mov', '/Users/FullPath/OfVideo2.mov', '/Users/FullPath/OfVideo1.mov'],
               copy_videos=True, multianimal=False)
 ```
 
@@ -40,9 +40,23 @@ bodyparts:
   - collar
 ```
 
+### Set config_path
+
+For the next steps, you will use the environment variable `config_path`.
+
+```python
+config_path = '/Users/FullPath/DeepLabCut/yourprojectname/config.yaml'
+```
+
 ## Step 4 - Label Video Frames
 
-### Extract Frames
+![](label_frame.gif)
+
+### Select Frames to Label:
+
+```python
+deeplabcut.extract_frames(config_path, mode='automatic', algo='kmeans', crop=False)
+```
 
 ### Label Frames
 
