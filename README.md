@@ -62,6 +62,8 @@ deeplabcut.extract_frames(config_path, mode='automatic', algo='kmeans', crop=Fal
 
 Use the DLC Labeling Toolbox to label frames. DLC will automatically select frames from the video(s) you import using kmeans quantization. It will also downsample the frames before annotation.
 
+### Build Skeleton
+
 ## Step 5 - Create Training Dataset
 
 ## Step 6 - Train the Model
@@ -69,3 +71,5 @@ Use the DLC Labeling Toolbox to label frames. DLC will automatically select fram
 ## Step 7 - Evaluate the Model
 
 ## Step 8 - Create Labeled Video
+
+![](labeled_video.gif)
