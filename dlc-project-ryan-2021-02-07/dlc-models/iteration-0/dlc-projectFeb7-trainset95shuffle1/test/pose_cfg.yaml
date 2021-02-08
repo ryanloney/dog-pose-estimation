@@ -1,0 +1,21 @@
+all_joints:
+- [0]
+- [1]
+- [2]
+- [3]
+- [4]
+- [5]
+- [6]
+- [7]
+- [8]
+- [9]
+all_joints_names: [nose, leftear, rightear, tailstart, tailend, rightfrontpaw, leftfrontpaw,
+  rightrearpaw, leftrearpaw, collar]
+dataset: training-datasets/iteration-0/UnaugmentedDataSet_dlc-projectFeb7/dlc-project_ryan95shuffle1.mat
+global_scale: 0.8
+init_weights: /usr/local/lib/python3.6/dist-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/resnet_v1_50.ckpt
+location_refinement: true
+locref_stdev: 7.2801
+net_type: resnet_50
+num_joints: 10
+scoremap_dir: test

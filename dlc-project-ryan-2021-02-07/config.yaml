@@ -1,0 +1,108 @@
+# Project definitions (do not edit)
+Task: dlc-project
+scorer: ryan
+date: Feb7
+multianimalproject:
+  false
+
+  # Project path (change when moving around)
+project_path:
+  /Users/ryanloney/code/dog-pose-estimation/dlc-project-ryan-2021-02-07
+
+  # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  ? /Users/ryanloney/code/dog-pose-estimation/dlc-project-ryan-2021-02-07/videos/IMG_7576.mov
+  : crop: 0, 640, 0, 360
+  ? /Users/ryanloney/code/dog-pose-estimation/dlc-project-ryan-2021-02-07/videos/IMG_7577.mov
+  : crop: 0, 640, 0, 360
+  ? /Users/ryanloney/code/dog-pose-estimation/dlc-project-ryan-2021-02-07/videos/IMG_7578.mov
+  : crop: 0, 640, 0, 360
+bodyparts:
+  - nose
+  - leftear
+  - rightear
+  - tailstart
+  - tailend
+  - rightfrontpaw
+  - leftfrontpaw
+  - rightrearpaw
+  - leftrearpaw
+  - collar
+start: 0
+stop: 1
+numframes2pick:
+  20
+
+  # Plotting configuration
+skeleton:
+  - - rightfrontpaw
+    - collar
+  - - leftfrontpaw
+    - collar
+  - - tailend
+    - rightrearpaw
+  - - tailend
+    - leftrearpaw
+  - - leftrearpaw
+    - collar
+  - - tailstart
+    - rightrearpaw
+  - - leftear
+    - rightear
+  - - tailend
+    - collar
+  - - rightear
+    - collar
+  - - tailstart
+    - leftfrontpaw
+  - - tailstart
+    - collar
+  - - leftear
+    - collar
+  - - rightrearpaw
+    - collar
+  - - nose
+    - leftear
+  - - tailstart
+    - rightfrontpaw
+  - - tailstart
+    - leftrearpaw
+  - - nose
+    - collar
+  - - tailstart
+    - tailend
+  - - nose
+    - rightear
+skeleton_color: yellow
+pcutoff: 0.6
+dotsize: 12
+alphavalue: 0.7
+colormap:
+  plasma
+
+  # Training,Evaluation and Analysis configuration
+TrainingFraction:
+  - 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size:
+  8
+
+  # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+croppedtraining:
+  false
+  #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2:
+  624
+
+  # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+  - 50
+  - 50
+move2corner: true
