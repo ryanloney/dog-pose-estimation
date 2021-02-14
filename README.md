@@ -1,5 +1,5 @@
 # dog-pose-estimation
-![](coco_pose.gif)
+<img src="coco_pose.gif" width="250">
 
 As a fun weekend project, I developed a pose estimation model with my dog using [DeepLabCut](http://www.mackenziemathislab.org/deeplabcut). DLC is a free and open source toolkit that enables researchers to estimate the pose of a subject. DLC leverages transfer learning, which is the ability to take a fully trained neural network -- which was trained with a large supervised data set -- and re-train it with a small set of images.  
 
