@@ -82,8 +82,14 @@ Use the DLC Labeling Toolbox to label frames. DLC will automatically select fram
 ### Build Skeleton
 
 ## Step 5 - Create Training Dataset
+```python
+deeplabcut.create_training_dataset(config_path, augmenter_type='imgaug')
+```
 
 ## Step 6 - Train the Model
+```python
+deeplabcut.train_network(config_path, shuffle=1, trainingsetindex=0, gputouse=None, max_snapshots_to_keep=5, autotune=False, displayiters=100, saveiters=15000, maxiters=30000, allow_growth=True)
+```
 
 ## Step 7 - Evaluate the Model
 
