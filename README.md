@@ -10,6 +10,7 @@ Using the DLC Python toolkit, I was able to collect and label ~100 images of my 
 📺 Watch: [Mackenzie Mathis: DeepLabCut Tech Demo](https://youtu.be/iKazf5F7bPU)  
 💻 Try DLC: https://github.com/DeepLabCut/DeepLabCut    
 
+📝 <b><i>Follow all of the steps below inside a [Jupyter Notebook](DLC_TrainNetwork_VideoAnalysis.ipynb)</b></i>
 
 ## 🎬 Step 1 - Collect Video  
 The first step is to collect videos of your dog. I took both indoor and ourdoor videos of Coco from many different angles with my iPhone X. Because I eventually want to detect her position based on pose (standing, sitting and down-stay), I took videos of each position. 
@@ -95,6 +96,12 @@ deeplabcut.create_training_dataset(config_path, augmenter_type='imgaug')
 deeplabcut.train_network(config_path, shuffle=1, trainingsetindex=0, gputouse=None, max_snapshots_to_keep=5, autotune=False, displayiters=100, saveiters=15000, maxiters=30000, allow_growth=True)
 ```
 
-## 📊 Step 7 - Evaluate the Model  
+## 📊 Step 7 - Analyze Video with the Model  
+```
+deeplabcut.analyze_videos(path_config_file,videofile_path, videotype='mov')
+```
 
-## 📽️ Step 8 - Create Labeled Video  
+## 📽️ Step 8 - Create Labeled Videos  
+```
+deeplabcut.create_labeled_video(path_config_file, videofile_path, videotype='mov', draw_skeleton=True)
+```
